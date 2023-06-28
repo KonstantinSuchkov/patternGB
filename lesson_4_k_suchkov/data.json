@@ -629,6 +629,20 @@
             "group_data": "Группа Тест",
             "your_type": "fullday",
             "create_group": "Create"
+        },
+        {
+            "your_name": "Тест Юзер",
+            "your_type": "teacher",
+            "create_user": "Create"
+        },
+        {
+            "group_data": "Группа Тестик",
+            "your_type": "start",
+            "create_group": "Create"
+        },
+        {
+            "group_to": "Ромашка",
+            "copy_group": "COPY"
         }
     ]
 }

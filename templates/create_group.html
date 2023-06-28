@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+{% extends "base.html" %}
+{% block content %}
+<head>
+  <title>PatternGB project - create group</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+
+    </div>
+      <div id="content">
+        <p>Это список наших групп:</p>
+        <ol> {% for group in main.groups %}
+          <li>{{group.name}}<form action="/create_group" method="post">
+            <input type="hidden" name="group_to" value={{group.name}}>
+            <input class="submit" type="submit" name="copy_group" value="COPY" />
+          </form></li>
+          {% endfor %}
+        </ol>
+        <!-- insert the page content here -->
+        <h1>Create New Group/ Создание новой группы</h1>
+        <p>{{ main.say_hello() }}
+          Для создания новой группы заполните форму:
+        </p>
+        <form action="/create_group" method="post">
+          <div class="form_settings">
+            <p><span>Name</span><input class="contact" type="text" name="group_data" value="" /></p>
+            <p>Type:</p>
+            <p><input list="your_type" name="your_type">
+               <datalist id="your_type">
+                <option value="fullday"></option>
+                <option value="start"></option>
+               </datalist></p>
+
+
+            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="create_group" value="Create" /></p>
+          </div>
+        </form>
+        <p><br /><br />NOTE: группа полного дня - fullday, подготовительная - start</p>
+      </div>
+    </div>
+</body>
+</html>
+{% endblock %}
