@@ -31,6 +31,38 @@
         {
             "user_id": "7",
             "user_name": "One Test Child"
+        },
+        {
+            "user_id": "1",
+            "user_name": "Зинаида Сергеевна"
+        },
+        {
+            "user_id": "3",
+            "user_name": "Папа Варвары"
+        },
+        {
+            "user_id": "3",
+            "user_name": "Папа Варвары"
+        },
+        {
+            "user_id": "7",
+            "user_name": "Child Testik"
+        },
+        {
+            "user_id": "1",
+            "user_name": "Зинаида Сергеевна"
+        },
+        {
+            "user_id": "7",
+            "user_name": "Child Testik"
+        },
+        {
+            "user_id": "2",
+            "user_name": "Анна Александровна"
+        },
+        {
+            "user_id": "7",
+            "user_name": "Child Testik"
         }
     ],
     "POST": [
@@ -48,6 +80,22 @@
         {
             "pupil": "7",
             "to_group": "2",
+            "add_pupil": "Добавить в группу"
+        },
+        {
+            "pupil": "7",
+            "del_pupil": "Удалить из группы",
+            "to_group": "2"
+        },
+        {
+            "your_name": "Child Testik",
+            "your_type": "child",
+            "your_parent": "3",
+            "create_user": "Create"
+        },
+        {
+            "pupil": "7",
+            "to_group": "1",
             "add_pupil": "Добавить в группу"
         },
         {
