@@ -1,0 +1,73 @@
+{
+    "GET": [
+        {
+            "user_id": "7",
+            "user_name": "Test user"
+        },
+        {
+            "user_id": "4",
+            "user_name": "Амелия"
+        },
+        {
+            "user_id": "3",
+            "user_name": "Тестовый родитель 3"
+        },
+        {
+            "user_id": "8",
+            "user_name": "testik 3"
+        },
+        {
+            "user_id": "3",
+            "user_name": "Тестовый родитель 3"
+        },
+        {
+            "user_id": "3",
+            "user_name": "Тестовый родитель 3"
+        },
+        {
+            "user_id": "8",
+            "user_name": "testik 3"
+        },
+        {
+            "user_id": "3",
+            "user_name": "Тестовый родитель 3"
+        }
+    ],
+    "POST": [
+        {
+            "pupil": "6",
+            "del_pupil": "Удалить из группы",
+            "to_group": "2"
+        },
+        {
+            "your_name": "testik 3",
+            "your_type": "child",
+            "your_parent": "3",
+            "create_user": "Create"
+        },
+        {
+            "row_id": "3",
+            "del_child": "DEL"
+        },
+        {
+            "user_id": "8",
+            "user_type": "child",
+            "user_name": "testik",
+            "del_user": "Удалить пользователя"
+        },
+        {
+            "your_name": "21",
+            "your_type": "teacher",
+            "create_user": "Create"
+        },
+        {
+            "group_data": "21",
+            "your_type": "fullday",
+            "create_group": "Create"
+        },
+        {
+            "group_to": "Ягодки",
+            "copy_group": "COPY"
+        }
+    ]
+}

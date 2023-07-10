@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+{% extends "base.html" %}
+{% block content %}
+<head>
+  <title>PatternGB project - contact us</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+
+    </div>
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1>Create New User/ Создание нового пользователя</h1>
+        <p>{{ main.say_hello() }}
+          Для создания нового пользователя заполните форму:
+        </p>
+        <form action="#" method="post">
+          <div class="form_settings">
+            <p><span>Name</span><input class="contact" type="text" name="your_name" value="" /></p>
+            <p>Type:</p>
+            <p><input list="your_type" name="your_type">
+               <datalist id="your_type">
+                <option value="teacher"></option>
+                <option value="parent"></option>
+               </datalist></p>
+            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="create_user" value="Create" /></p>
+          </div>
+        </form>
+        <p><br /><br />NOTE: преподаватель - teacher, родитель - parent, для создания пользователя "ребенок" - child необходимо перейти на страницу родителя</p>
+      </div>
+    </div>
+</body>
+</html>
+{% endblock %}

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+{% extends "base.html" %}
+{% block content %}
+<head>
+  <title>PatternGB project - another page</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" title="style" />
+</head>
+
+<body>
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+          <h1><a href="/">textured<span class="logo_colour">_stars_light</span></a></h1>
+          <h2>Website Template.</h2>
+        </div>
+      </div>
+
+    </div>
+    <div id="site_content">
+      <div class="sidebar">
+        <!-- insert your sidebar items here -->
+        <h3>SOLID принципы</h3>
+        {{ solid }}
+        <form action="/another_page" method="POST">
+        <!-- скрытый параметр -->
+        <input type="hidden" name="solid" value="1">
+        <input type="submit" class="btn btn-dark" value="S - принцип">
+        </form>
+
+        <form action="/another_page" method="POST">
+        <input type="hidden" name="solid" value="2">
+        <input type="submit" class="btn btn-dark" value="O - принцип">
+        </form>
+
+        <form action="/another_page" method="POST">
+        <input type="hidden" name="solid" value="3">
+        <input type="submit" class="btn btn-dark" value="L - принцип">
+        </form>
+
+        <form action="/another_page" method="POST">
+        <input type="hidden" name="solid" value="4">
+        <input type="submit" class="btn btn-dark" value="I - принцип">
+        </form>
+
+        <form action="/another_page" method="POST">
+        <input type="hidden" name="solid" value="5">
+        <input type="submit" class="btn btn-dark" value="D - принцип">
+        </form>
+
+        <h3>Useful Links</h3>
+        <ul>
+          <li><a href="https://gb.ru/lessons/336384">GB Patterns</a></li>
+          <li><a href="https://github.com/KonstantinSuchkov/patternGB">My github</a></li>
+          <li><a href="https://gb-flaskproject.onrender.com/">Flask Project</a></li>
+          <li><a href="https://djangoproject-e1o0.onrender.com/">Django Project</a></li>
+        </ul>
+        <h3>Search</h3>
+        <form method="post" action="#" id="search_form">
+          <p>
+            <input class="search" type="text" name="search_field" value="Enter keywords....." />
+            <input name="search" type="image" style="border: 0; margin: 0 0 -9px 5px;" src="style/search.png" alt="Search" title="Search" />
+          </p>
+        </form>
+      </div>
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1>Another Page</h1>
+        <p>Место для текста</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+{% endblock %}
