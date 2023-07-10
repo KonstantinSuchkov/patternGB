@@ -1,6 +1,7 @@
 import threading
 import sqlite3
 
+
 class UserMapper:
     """
     Паттерн DATA MAPPER
@@ -50,7 +51,6 @@ class UserMapper:
             raise e
 
     def add_child(self, user, parent_id):
-        print('start adding child into table parenthood...params == ', 'name: ', user.name, 'id: ', user.id, 'par_id: ', parent_id)
         statement = "INSERT INTO parenthood (child, child_id, parent_id) values(?, ?, ?)"
         self.cursor.execute(statement, (user.name, user.id, parent_id))
         try:
@@ -157,12 +157,14 @@ class UnitOfWork:
 
 connection = sqlite3.connect('main_db.sqlite')
 
+
 class MapperRegistry:
     @staticmethod
     def get_mapper(obj):
         if isinstance(obj, User):
             print('from MapperRegistry', obj)
             return UserMapper(connection)
+
 
 class UserFactory:
     @staticmethod
