@@ -1,7 +1,6 @@
 import json
 import abc
 
-
 SOLID = ['SOLID - это аббревиатура 5-ти основных принципов проектирования в объектно-ориентированном программировании',
          "1. Принцип единственной ответственности (single responsibility principle). Для каждого класса должно быть "
          "определено единственное назначение. Все ресурсы, необходимые для его осуществления, должны быть "
@@ -61,37 +60,37 @@ class Notifier(metaclass=abc.ABCMeta):
         self._log_list.append([address, subject, message])
 
 
-class EmailNotifier(Notifier):
+class EmailNotifier(Notifier):  # имитация информирования по email
     def __init__(self):
         super().__init__()
         self.mail_from = ''
 
     def _login(self):
-    # // no need to login
+        # // no need to login
         pass
 
     def _send(self, mail_to, subject, message):
         print(f'send_mail: {mail_to}, {subject}, {message}')
 
     def _logout(self):
-    # // no need to logout
+        # // no need to logout
         pass
 
 
-class SmsNotifier(Notifier):
+class SmsNotifier(Notifier):  # имитация информирования по смс
     def __init__(self):
         super().__init__()
         self.mail_from = ''
 
     def _login(self):
-    # // no need to login
+        # // no need to login
         pass
 
     def _send(self, sms_to, subject, message):
         print(f'send_sms: {sms_to}, {subject}, {message}')
 
     def _logout(self):
-    # // no need to logout
+        # // no need to logout
         pass
 
 

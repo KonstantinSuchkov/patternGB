@@ -57,26 +57,22 @@ class API:
             request_params = self.method_post(environ)
 
             if 'solid' in request_params:  # если запрос solid, то меняем переменную для отображения на сайте
-                self.post_solid(environ)
-                response = self.start_page(environ)
+                self.post_solid(request_params)
 
             if request_params != {} and 'solid' not in request_params:
                 save_data(request_params, "POST")  # сохранение данных в файл в раздел POST
 
             if 'create_user' in request_params:
                 self.post_create_user(request_params)
-                response = self.start_page(environ)
 
             if 'del_user' in request_params:
                 self.del_user(request_params)
 
             if 'create_group' in request_params:
                 self.post_create_group(request_params)
-                response = self.start_page(environ)
 
             if 'copy_group' in request_params:
                 self.post_copy_group(request_params)
-                response = self.start_page(environ)
 
             if 'add_pupil' in request_params:
                 self.post_add_pupil(request_params)
@@ -86,6 +82,8 @@ class API:
 
             if 'del_child' in request_params:
                 self.del_parenthood(request_params)
+
+            response = self.start_page(environ)  # "обновляем" страницу
 
         print(f'---> log app ---> method: {method}, params: {request_params}')
         return response(environ, start_response)
@@ -140,7 +138,7 @@ class API:
 
     def del_parenthood(self, request_params):
         row_id = request_params['row_id']
-        print('stert del parenthood', {row_id})
+        print('start del parenthood', {row_id})
         self.user_bd.delete_parenthood(row_id)
 
     def post_create_group(self, request_params):
